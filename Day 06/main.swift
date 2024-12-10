@@ -2,7 +2,7 @@ import AoC_Helpers
 
 let map = Matrix(input().lines())
 let start = map.onlyIndex(of: "^")!
-let obstacles = Set(map.positions.filter { map[$0] == "#" })
+let obstacles = Set(map.positions(of: "#"))
 
 measureTime {
     var position = start
