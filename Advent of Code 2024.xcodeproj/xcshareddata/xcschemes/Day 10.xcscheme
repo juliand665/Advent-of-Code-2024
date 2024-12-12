@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B9BAA4C92D02BC3B00E3988F"
-               BuildableName = "Day 06"
-               BlueprintName = "Day 06"
+               BlueprintIdentifier = "B998765A2D08FB3900C2ABE1"
+               BuildableName = "Day 10"
+               BlueprintName = "Day 10"
                ReferencedContainer = "container:Advent of Code 2024.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -31,7 +31,7 @@
       shouldAutocreateTestPlan = "YES">
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -46,9 +46,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B9BAA4C92D02BC3B00E3988F"
-            BuildableName = "Day 06"
-            BlueprintName = "Day 06"
+            BlueprintIdentifier = "B998765A2D08FB3900C2ABE1"
+            BuildableName = "Day 10"
+            BlueprintName = "Day 10"
             ReferencedContainer = "container:Advent of Code 2024.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -63,9 +63,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B9BAA4C92D02BC3B00E3988F"
-            BuildableName = "Day 06"
-            BlueprintName = "Day 06"
+            BlueprintIdentifier = "B998765A2D08FB3900C2ABE1"
+            BuildableName = "Day 10"
+            BlueprintName = "Day 10"
             ReferencedContainer = "container:Advent of Code 2024.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
