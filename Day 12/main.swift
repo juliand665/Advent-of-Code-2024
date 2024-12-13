@@ -22,30 +22,33 @@ for position in garden.positions {
     var region: Set<Vector2> = []
     var perimeter = 0
     var sideCount = 0
-    var countedForSides: [Direction: Set<Vector2>] = [:]
     func explore(from position: Vector2) {
         guard region.insert(position).inserted else { return }
         
         explored.insert(position)
         
         for direction in Direction.allCases {
-            let neighbor = position + direction
-            if garden.element(at: neighbor) == plant {
-                explore(from: neighbor)
+            let next = position + direction
+            if garden.element(at: next) == plant {
+                explore(from: next)
             } else {
                 perimeter += 1
-                
-                if countedForSides[direction]?.contains(position) != true {
-                    // explore plants along this side
-                    sideCount += 1
-                    for clockwise in [true, false] {
-                        let offset = direction.rotated(clockwise: clockwise)
-                        let side = sequence(first: position) { $0 + offset }.prefix {
-                            garden.element(at: $0) == plant && garden.element(at: $0 + direction) != plant
-                        }
-                        countedForSides[direction, default: []].formUnion(side)
-                    }
-                }
+            }
+            
+            let front = next
+            let right = direction.rotated()
+            
+            if // concave corner
+                garden.element(at: front) != plant,
+                garden.element(at: position + right) != plant
+            {
+                sideCount += 1
+            } else if // convex corner
+                garden.element(at: front) == plant,
+                garden.element(at: position + right) == plant,
+                garden.element(at: front + right) != plant
+            {
+                sideCount += 1
             }
         }
     }
