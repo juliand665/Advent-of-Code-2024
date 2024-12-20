@@ -26,7 +26,6 @@ let distances: [Vector2: Int] = [:] <- { distances in
 	}
 }
 
-let distance = distances[end]!
 let sortedDistances = distances.sorted(on: \.value)
 
 func goodSkips(maxLength: Int) -> Int {
